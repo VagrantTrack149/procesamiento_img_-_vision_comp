@@ -18,6 +18,8 @@ if not ret:
 
 cv.imshow('Primer Fotograma Original', frame)
 cv.waitKey(0)
+#guardar frame
+cv.imwrite('primer_fotograma.jpg', frame)
 
 cap.release()
 cv.destroyAllWindows()
