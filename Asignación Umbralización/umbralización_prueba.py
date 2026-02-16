@@ -53,6 +53,14 @@ while cap.isOpened():
     final_layer[mask_white > 0] = 170
     final_layer[mask_red > 0]   = 255
 
+    # Aplicar multi-otsu al final_layer (niveles por color) y generar capa resultante
+    try:
+        thresholds_final = threshold_multiotsu(final_layer, classes=5)
+        labels_final = np.digitize(final_layer, bins=thresholds_final)
+        final_layer_otsu = (labels_final * (255 // labels_final.max())).astype(np.uint8)
+    except Exception:
+        final_layer_otsu = final_layer.copy()
+
     #  BOUNDING BOX 
     img_box = crop_img.copy()
 
@@ -72,8 +80,7 @@ while cap.isOpened():
 
     #  VISUALIZACIÓN 
     cv.imshow('Recorte Original', crop_img)
-    cv.imshow('Otsu Multi-Nivel', otsu_layer)
-    cv.imshow('Capa Final Color', final_layer)
+    cv.imshow('Otsu Multi-Nivel', final_layer_otsu)
     cv.imshow('Bounding Boxes', img_box)
 
     if cv.waitKey(1) & 0xFF == ord('q'):
