@@ -11,7 +11,7 @@ while cap.isOpened():
 
     h, w, _ = img.shape
 
-    # Ajustamos región de interes al centro
+    # Región de interés centrada
     margin_h, margin_w = int(h * 0.1), int(w * 0.1)
     crop_img = img[margin_h:h-margin_h, margin_w:w-margin_w]
 
@@ -29,12 +29,11 @@ while cap.isOpened():
 
     # Incrementar saturación
     #https://es.stackoverflow.com/questions/226799/c%C3%B3mo-modificar-intensidades-de-colores-en-una-imagen-con-numpy-python
+
     hsv = cv.cvtColor(img_no_shadow, cv.COLOR_BGR2HSV)
     h_ch, s_ch, v_ch = cv.split(hsv)
-
     s_ch = cv.multiply(s_ch, 1.4)
     s_ch = np.clip(s_ch, 0, 255).astype(np.uint8)
-
     hsv_boost = cv.merge((h_ch, s_ch, v_ch))
     img_color_boost = cv.cvtColor(hsv_boost, cv.COLOR_HSV2BGR)
 
@@ -43,17 +42,17 @@ while cap.isOpened():
     blur = cv.GaussianBlur(img_color_boost, (5, 5), 0)
     sharpened = cv.addWeighted(img_color_boost, 1.5, blur, -0.5, 0)
 
+    # Máscara de color para fondo 
     # Eliminar fondo de color picker
     lab2 = cv.cvtColor(sharpened, cv.COLOR_BGR2LAB)
-
     bg_mask = cv.inRange(
         lab2,
-        np.array([0, 120, 120]),   # fondo gris verdoso
+        np.array([0, 120, 120]),   # fondo 
         np.array([255, 136, 136])
     )
-
     fg_mask_color = cv.bitwise_not(bg_mask)
-    # MULTI-OTSU con preprocesado gauss
+
+    # MULTI-OTSU con preprocesado gauss escala grises
     gray = cv.cvtColor(sharpened, cv.COLOR_BGR2GRAY)
     gray = cv.GaussianBlur(gray, (5, 5), 0)
 
@@ -65,46 +64,55 @@ while cap.isOpened():
 
     # INCLUIR OBJETOS NEGROS (GRADIENTE)
     # https://www.geeksforgeeks.org/python/python-morphological-operations-in-image-processing-gradient-set-3/ 
+
     grad = cv.morphologyEx(gray, cv.MORPH_GRADIENT,
-                            cv.getStructuringElement(cv.MORPH_RECT, (5, 5)))
+                           cv.getStructuringElement(cv.MORPH_RECT, (5, 5)))
     _, grad_mask = cv.threshold(grad, 15, 255, cv.THRESH_BINARY)
 
     # Unir mascaras
     object_mask = cv.bitwise_and(fg_mask_color, otsu_mask)
     object_mask = cv.bitwise_or(object_mask, grad_mask)
 
-    # Rellenar huecos en las areas
+    ## Rellenar huecos en las areas
     #https://stackoverflow.com/questions/47517667/how-does-cv2-floodfill-work
-    h, w = object_mask.shape
-    floodfill = object_mask.copy()
-    mask = np.zeros((h + 2, w + 2), np.uint8)
 
+    h_mask, w_mask = object_mask.shape
+    floodfill = object_mask.copy()
+    mask = np.zeros((h_mask + 2, w_mask + 2), np.uint8)
     cv.floodFill(floodfill, mask, (0, 0), 255)
     floodfill_inv = cv.bitwise_not(floodfill)
     object_mask = cv.bitwise_or(object_mask, floodfill_inv)
 
     # Morfologia
     # https://programmerclick.com/article/44381457787/ 
-    kernel = cv.getStructuringElement(cv.MORPH_ELLIPSE, (9, 9))
-    object_mask = cv.morphologyEx(object_mask, cv.MORPH_CLOSE, kernel, iterations=2)
+    kernel = cv.getStructuringElement(cv.MORPH_ELLIPSE, (5, 5)) 
+    object_mask = cv.morphologyEx(object_mask, cv.MORPH_CLOSE, kernel, iterations=1)
     object_mask = cv.morphologyEx(object_mask, cv.MORPH_OPEN, kernel, iterations=1)
 
-    # BOUNDING BOX generico copiando los bordes
     img_box = sharpened.copy()
-    contours, _ = cv.findContours(object_mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+    num_labels, labels_cc, stats, centroids = cv.connectedComponentsWithStats(object_mask, connectivity=8)
 
-    for cnt in contours:
-        area = cv.contourArea(cnt)
+    # BOUNDING BOX generico copiando los bordes
+    obj_id = 1
+    for i in range(1, num_labels):
+        area = stats[i, cv.CC_STAT_AREA]
         if area < 1200:
             continue
+        x = stats[i, cv.CC_STAT_LEFT]
+        y = stats[i, cv.CC_STAT_TOP]
+        w_box = stats[i, cv.CC_STAT_WIDTH]
+        h_box = stats[i, cv.CC_STAT_HEIGHT]
 
-        x, y, w_box, h_box = cv.boundingRect(cnt)
         cv.rectangle(img_box, (x, y), (x + w_box, y + h_box), (0, 255, 0), 2)
-        cv.putText(img_box, f"Objeto {len(contours)}",
-                (x, y - 8),
-                cv.FONT_HERSHEY_SIMPLEX, 0.6,
-                (0, 255, 0), 2)
-    
+        cv.putText(img_box, f"Objeto {obj_id}",
+                   (x, y - 8),
+                   cv.FONT_HERSHEY_SIMPLEX, 0.6,
+                   (0, 255, 0), 2)
+        obj_id += 1
+
+
+
+    # Mostrar resultados
     cv.imshow('multi-otsu', otsu_mask)
     cv.imshow("Recorte", crop_img)
     cv.imshow("Sin Fondo + Objetos", object_mask)
@@ -115,4 +123,3 @@ while cap.isOpened():
 
 cap.release()
 cv.destroyAllWindows()
-
