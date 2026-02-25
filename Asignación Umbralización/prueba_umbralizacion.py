@@ -115,6 +115,7 @@ while cap.isOpened():
     # Mostrar resultados
     cv.imshow('multi-otsu', otsu_mask)
     cv.imshow("Recorte", crop_img)
+    cv.imshow("Labels",labels.astype(np.uint8)*85)
     cv.imshow("Sin Fondo + Objetos", object_mask)
     cv.imshow("Bounding Boxes", img_box)
 

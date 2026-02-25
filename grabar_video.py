@@ -8,7 +8,7 @@ from datetime import datetime
 pipeline = rs.pipeline()
 config = rs.config()
 
-config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
+config.enable_stream(rs.stream.color, 1280, 720, rs.format.bgr8, 30)
 
 # Iniciar el pipeline
 pipeline.start(config)
@@ -26,6 +26,7 @@ out = None
 recording = False
 video_count = 0
 
+
 try:
     while True:
         frames = pipeline.wait_for_frames()
@@ -35,7 +36,7 @@ try:
             continue
 
         color_image = np.asanyarray(color_frame.get_data())
-
+        gris_image=cv2.cvtColor(color_image,cv2.COLOR_RGB2GRAY)
         # Si está grabando, escribir el frame
         if recording and out is not None:
             out.write(color_image)
@@ -46,7 +47,7 @@ try:
                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
         cv2.imshow('RealSense Video', color_image)
-        
+        #cv2.imshow('gris', gris_image)
         key = cv2.waitKey(1)
         
         # Si presionas 'r', iniciar/detener grabación
@@ -55,7 +56,7 @@ try:
                 # Iniciar grabación
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 filename = f"videos/video_{timestamp}.mp4"
-                out = cv2.VideoWriter(filename, fourcc, 30.0, (640, 480))
+                out = cv2.VideoWriter(filename, fourcc, 30.0, (1280, 720))
                 recording = True
                 print(f"Grabación iniciada: {filename}")
             else:

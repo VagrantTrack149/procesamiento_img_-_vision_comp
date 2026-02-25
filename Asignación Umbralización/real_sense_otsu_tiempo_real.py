@@ -30,7 +30,7 @@ try:
         h, w, _ = img.shape
 
         # Ajustamos región de interes al centro
-        margin_h, margin_w = int(h * 0.1), int(w * 0.1)
+        margin_h, margin_w = int(h * 0.15), int(w * 0.15)
         crop_img = img[margin_h:h-margin_h, margin_w:w-margin_w]
 
         # quitar sombras
@@ -110,19 +110,22 @@ try:
         # BOUNDING BOX generico copiando los bordes
         img_box = sharpened.copy()
         contours, _ = cv.findContours(object_mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
-
+        obj_id=1
         for cnt in contours:
             area = cv.contourArea(cnt)
-            if area < 1200:
+            if area < 1500:
                 continue
 
             x, y, w_box, h_box = cv.boundingRect(cnt)
             cv.rectangle(img_box, (x, y), (x + w_box, y + h_box), (0, 255, 0), 2)
-            cv.putText(img_box, "Objeto",
+            cv.putText(img_box, f"Objeto {obj_id}",
                     (x, y - 8),
                     cv.FONT_HERSHEY_SIMPLEX, 0.6,
                     (0, 255, 0), 2)
+            obj_id+=1
         
+        cv.imshow('multi-otsu', otsu_mask)
+        cv.imshow('labels', labels.astype(np.uint8) * 85)
         cv.imshow("Recorte", crop_img)
         cv.imshow("Sin Fondo + Objetos", object_mask)
         cv.imshow("Bounding Boxes", img_box)
