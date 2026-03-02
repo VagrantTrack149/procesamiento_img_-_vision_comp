@@ -81,9 +81,19 @@ for n in ventanas:
         res_final = np.where(mascara_fondo[:,:,None] == 255, img_gauss, frame)
         
         cv.imshow(f"Fondo Nublado {n}x{n}", res_final)
+        
+        #aplicar filtro para detectar bordes en el ROI (CANNY)
+        img_recortada= frame[200:500, 100:900]
+        img_recortada_gris= cv.cvtColor(img_recortada, cv.COLOR_BGR2GRAY)
+        bordes=cv.Canny(res_final, 100, 200)
+        cv.imshow(f"Bordes {n}x{n}", bordes)
+
+        
+
         if cv.waitKey(1) & 0xFF == ord('q'): break
 
-    # Reporte de métricas para la Tabla 1 
+    # Reporte de métricas para la Tabla 
+    #https://programmerclick.com/article/97964726605/
     for tipo in ['Promedio', 'Gaussiano', 'Frecuencial']:
         m_mse = np.mean(mse_total[tipo])
         m_time = np.mean(tiempo_total[tipo])

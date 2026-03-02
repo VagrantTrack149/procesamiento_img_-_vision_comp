@@ -47,10 +47,22 @@ for n in ventanas:
         # Multi-Otsu para localizar el código, como es blanco se utiliza label 3
         thresholds = threshold_multiotsu(img_cortada, classes=4)
         labels = np.digitize(img_cortada, bins=thresholds)
+        #cv.imshow("Segmentacion Codigo", labels.astype(np.uint8)*85)
         
         # mascara fusionada para código de barras (label 3) y amarillo (label 2)
         mascara_roi = np.zeros(img_cortada.shape, dtype=np.uint8)
-        mascara_roi[(labels == 3) | (labels == 2)] = 255
+        mascara_roi[(labels == 1) | (labels == 3)] = 255
+        cv.imshow("Mascara Codigo", mascara_roi)
+        #mascara_prueba=np.zeros(img_cortada.shape, dtype=np.uint8)
+        #mascara_prueba[(labels == 1)]=255
+        #cv.imshow("Mascara Prueba", mascara_prueba)
+        ##mascara_prueba_1=np.zeros(img_cortada.shape, dtype=np.uint8)
+        #mascara_prueba_1[(labels == 2)]=255
+        #cv.imshow("Mascara Prueba 1", mascara_prueba_1)
+        #mascara_prueba_2=np.zeros(img_cortada.shape, dtype=np.uint8)
+        #mascara_prueba_2[(labels == 3)]=255
+        #cv.imshow("Mascara Prueba 2", mascara_prueba_2)
+        
         
         # 1. Promedio
         t0 = time.time()
@@ -66,7 +78,7 @@ for n in ventanas:
 
         # 3. Frecuencial
         t2 = time.time()
-        radio = int(500 / n) # Ajuste empírico del radio
+        radio = int(500 / n)
         res_freq = filtro_frecuencial_pasabajas(img_cortada, radio)
         tiempos['Frecuencial'].append(time.time() - t2)
         mse_total['Frecuencial'].append(np.mean((img_cortada - res_freq)**2))
@@ -82,6 +94,7 @@ for n in ventanas:
         final[220:450, 100:900] = roi_final
         
         cv.imshow("Anonimizacion de Codigo", final)
+        cv.imshow("Imagen original", frame)
         if cv.waitKey(1) & 0xFF == ord('q'): break
 
     # Resultados para la Tabla
