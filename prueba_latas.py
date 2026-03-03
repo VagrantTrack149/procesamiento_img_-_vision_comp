@@ -16,7 +16,10 @@ def aplicar_filtro_frecuencial(img_gris, radio):
     return cv.normalize(img_back, None, 0, 255, cv.NORM_MINMAX).astype(np.uint8)
 
 # Configuración
-video_path = 'videos/videos renombrar/2_Latas_orden.mp4'
+video_path = 'videos/videos renombrar/2_faltante.mp4'
+#video_path = 'videos/videos renombrar/2_Latas_orden.mp4'
+#video_path = 'videos/videos renombrar/2_latas_desorden.mp4'
+
 ventanas = [9, 13, 21]
 K_MAX = 47
 
