@@ -3,21 +3,29 @@ import numpy as np
 import time
 
 def aplicar_filtro_frecuencial(img_gris, radio):
-    dft = cv.dft(np.float32(img_gris), flags=cv.DFT_COMPLEX_OUTPUT)
+    h, w = img_gris.shape
+    img_float = np.float32(img_gris)
+    
+    dft = cv.dft(img_float, flags=cv.DFT_COMPLEX_OUTPUT)
     dft_shift = np.fft.fftshift(dft)
-    rows, cols = img_gris.shape
-    crow, ccol = rows // 2, cols // 2
-    mask = np.zeros((rows, cols, 2), np.uint8)
-    cv.circle(mask, (ccol, crow), radio, (1, 1, 1), -1)
-    fshift = dft_shift * mask
-    f_ishift = np.fft.ifftshift(fshift)
-    img_back = cv.idft(f_ishift)
-    img_back = cv.magnitude(img_back[:, :, 0], img_back[:, :, 1])
-    return cv.normalize(img_back, None, 0, 255, cv.NORM_MINMAX).astype(np.uint8)
-
+    
+    crow, ccol = h // 2, w // 2
+    
+    mask = np.zeros((h, w), dtype=np.float32)
+    cv.circle(mask, (ccol, crow), radio, 1, -1)
+    
+    dft_shift[:,:,0] *= mask
+    dft_shift[:,:,1] *= mask
+    
+    f_ishift = np.fft.ifftshift(dft_shift)
+    
+    img_back = cv.idft(f_ishift, flags=cv.DFT_SCALE | cv.DFT_REAL_OUTPUT)
+    img_back = np.clip(img_back, 0, 255).astype(np.uint8)
+    return img_back
 # Configuración
-video_path = 'videos/videos renombrar/2_faltante.mp4'
-#video_path = 'videos/videos renombrar/2_Latas_orden.mp4'
+
+#video_path = 'videos/videos renombrar/2_faltante.mp4'
+video_path = 'videos/videos renombrar/2_Latas_orden.mp4'
 #video_path = 'videos/videos renombrar/2_latas_desorden.mp4'
 
 ventanas = [9, 13, 21]
