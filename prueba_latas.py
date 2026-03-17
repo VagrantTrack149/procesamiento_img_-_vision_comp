@@ -77,9 +77,8 @@ for n in ventanas:
         cv.rectangle(mascara_banda, (100, 200), (900, 500), 255, -1)
         mascara_fondo = cv.bitwise_not(mascara_banda)
         fondo_pixels = mascara_fondo == 255
-
         orig_fondo = frame[fondo_pixels]
-
+    
         # Filtro promedio
         t0 = time.time()
         img_prom = cv.blur(frame, (n, n))
