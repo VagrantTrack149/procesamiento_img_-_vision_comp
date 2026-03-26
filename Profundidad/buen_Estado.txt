@@ -1,0 +1,21 @@
+2026-03-25 15:10:12 | Clase: GRANDE  | Estado: NORMAL          | H_Max: 15.50cm | D:-0.14 | STD: 0.07 | A0:15.23 | A3:15.09
+2026-03-25 15:10:18 | Clase: MEDIANA | Estado: NORMAL          | H_Max: 10.70cm | D:-0.09 | STD: 0.06 | A0:10.37 | A3:10.28
+2026-03-25 15:10:25 | Clase: CHICA   | Estado: ABOLLADA (SALTO) | H_Max:  2.80cm | D:-0.80 | STD: 0.35 | A0: 2.26 | A3: 1.46
+2026-03-25 15:10:32 | Clase: GRANDE  | Estado: ABOLLADA (DOMO) | H_Max: 15.50cm | D:-0.16 | STD: 0.07 | A0:15.28 | A3:15.12
+2026-03-25 15:10:39 | Clase: MEDIANA | Estado: ABOLLADA (DOMO) | H_Max: 10.70cm | D:-0.21 | STD: 0.09 | A0:10.43 | A3:10.22
+2026-03-25 15:10:46 | Clase: CHICA   | Estado: ABOLLADA (SALTO) | H_Max:  2.90cm | D:-0.70 | STD: 0.28 | A0: 2.32 | A3: 1.62
+2026-03-25 15:10:57 | Clase: GRANDE  | Estado: NORMAL          | H_Max: 15.50cm | D:-0.14 | STD: 0.07 | A0:15.23 | A3:15.09
+2026-03-25 15:11:04 | Clase: MEDIANA | Estado: NORMAL          | H_Max: 10.70cm | D:-0.09 | STD: 0.06 | A0:10.37 | A3:10.28
+2026-03-25 15:11:11 | Clase: CHICA   | Estado: ABOLLADA (SALTO) | H_Max:  2.80cm | D:-0.80 | STD: 0.35 | A0: 2.26 | A3: 1.46
+2026-03-25 15:11:18 | Clase: GRANDE  | Estado: ABOLLADA (DOMO) | H_Max: 15.50cm | D:-0.16 | STD: 0.07 | A0:15.28 | A3:15.12
+2026-03-25 15:11:25 | Clase: MEDIANA | Estado: ABOLLADA (DOMO) | H_Max: 10.70cm | D:-0.21 | STD: 0.09 | A0:10.43 | A3:10.22
+2026-03-25 15:11:32 | Clase: CHICA   | Estado: ABOLLADA (SALTO) | H_Max:  2.90cm | D:-0.70 | STD: 0.28 | A0: 2.32 | A3: 1.62
+2026-03-25 15:12:01 | Clase: GRANDE  | Estado: NORMAL          | H_Max: 15.40cm | D: 0.15 | STD: 0.06 | A0:15.07 | A3:15.21
+2026-03-25 15:12:05 | Clase: MEDIANA | Estado: ABOLLADA (DOMO) | H_Max: 10.80cm | D:-0.24 | STD: 0.10 | A0:10.36 | A3:10.12
+2026-03-25 15:12:09 | Clase: CHICA   | Estado: ABOLLADA (SALTO) | H_Max:  3.30cm | D:-0.73 | STD: 0.30 | A0: 2.33 | A3: 1.60
+2026-03-25 15:12:12 | Clase: GRANDE  | Estado: NORMAL          | H_Max: 15.40cm | D:-0.00 | STD: 0.03 | A0:15.10 | A3:15.10
+2026-03-25 15:12:16 | Clase: MEDIANA | Estado: NORMAL          | H_Max: 10.70cm | D: 0.12 | STD: 0.06 | A0:10.15 | A3:10.27
+2026-03-25 15:12:20 | Clase: CHICA   | Estado: ABOLLADA (SALTO) | H_Max:  2.60cm | D:-0.68 | STD: 0.28 | A0: 2.36 | A3: 1.68
+2026-03-25 15:12:23 | Clase: GRANDE  | Estado: NORMAL          | H_Max: 15.40cm | D: 0.13 | STD: 0.07 | A0:15.02 | A3:15.15
+2026-03-25 15:12:27 | Clase: MEDIANA | Estado: NORMAL          | H_Max: 10.80cm | D: 0.06 | STD: 0.03 | A0:10.22 | A3:10.28
+2026-03-25 15:12:31 | Clase: CHICA   | Estado: ABOLLADA (SALTO) | H_Max:  3.09cm | D:-0.68 | STD: 0.30 | A0: 2.34 | A3: 1.66

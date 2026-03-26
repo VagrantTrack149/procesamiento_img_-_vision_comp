@@ -1,0 +1,14 @@
+2026-03-25 09:53:41 | Clase: GRANDE | Estado: ABOLLADA | H_Max: 165.0mm | Borde: 151.1mm | Centro: 156.0mm | Delta: 4.9mm | Ratio: 0.916 | Score: 0.205
+2026-03-25 09:53:45 | Clase: MEDIANA | Estado: DUDA | H_Max: 114.0mm | Borde: 103.8mm | Centro: 105.0mm | Delta: 1.2mm | Ratio: 0.910 | Score: 0.100
+2026-03-25 09:53:49 | Clase: CHICA | Estado: ABOLLADA | H_Max: 26.0mm | Borde: 19.6mm | Centro: 22.4mm | Delta: 2.7mm | Ratio: 0.755 | Score: 0.253
+2026-03-25 09:53:53 | Clase: GRANDE | Estado: NORMAL | H_Max: 157.0mm | Borde: 151.5mm | Centro: 149.0mm | Delta: 2.5mm | Ratio: 0.965 | Score: 0.101
+2026-03-25 09:54:01 | Clase: CHICA | Estado: ABOLLADA | H_Max: 31.0mm | Borde: 23.4mm | Centro: 21.0mm | Delta: 2.4mm | Ratio: 0.755 | Score: 0.244
+2026-03-25 09:54:05 | Clase: GRANDE | Estado: NORMAL | H_Max: 161.0mm | Borde: 152.4mm | Centro: 151.6mm | Delta: 0.8mm | Ratio: 0.947 | Score: 0.060
+2026-03-25 09:54:10 | Clase: CHICA | Estado: ABOLLADA | H_Max: 28.0mm | Borde: 21.2mm | Centro: 22.0mm | Delta: 0.8mm | Ratio: 0.759 | Score: 0.191
+2026-03-25 09:54:21 | Clase: GRANDE | Estado: ABOLLADA | H_Max: 165.0mm | Borde: 151.1mm | Centro: 156.0mm | Delta: 4.9mm | Ratio: 0.916 | Score: 0.205
+2026-03-25 09:54:25 | Clase: MEDIANA | Estado: DUDA | H_Max: 114.0mm | Borde: 103.8mm | Centro: 105.0mm | Delta: 1.2mm | Ratio: 0.910 | Score: 0.100
+2026-03-25 09:54:29 | Clase: CHICA | Estado: ABOLLADA | H_Max: 26.0mm | Borde: 19.6mm | Centro: 22.4mm | Delta: 2.7mm | Ratio: 0.755 | Score: 0.253
+2026-03-25 09:54:32 | Clase: GRANDE | Estado: NORMAL | H_Max: 157.0mm | Borde: 151.5mm | Centro: 149.0mm | Delta: 2.5mm | Ratio: 0.965 | Score: 0.101
+2026-03-25 09:54:41 | Clase: CHICA | Estado: ABOLLADA | H_Max: 31.0mm | Borde: 23.4mm | Centro: 21.0mm | Delta: 2.4mm | Ratio: 0.755 | Score: 0.244
+2026-03-25 09:54:45 | Clase: GRANDE | Estado: NORMAL | H_Max: 161.0mm | Borde: 152.4mm | Centro: 151.6mm | Delta: 0.8mm | Ratio: 0.947 | Score: 0.060
+2026-03-25 09:54:49 | Clase: CHICA | Estado: ABOLLADA | H_Max: 28.0mm | Borde: 21.2mm | Centro: 22.0mm | Delta: 0.8mm | Ratio: 0.759 | Score: 0.191

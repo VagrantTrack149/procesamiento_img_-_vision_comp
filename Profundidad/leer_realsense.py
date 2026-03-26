@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 def main():
-    archivo_entrada = 'grabacion_20260312_190040.bag'
+    archivo_entrada = 'juntas_ordenadas.bag'
 
     # Configurar los flujos (streams) de la cámara RealSense
     pipeline = rs.pipeline()

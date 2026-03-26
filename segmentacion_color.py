@@ -70,7 +70,7 @@ def segmentar_imagen():
     cv.imshow('distancia ', distancia2_norm)
     cv.imshow('Color 1', mascara_color1)
     cv.imshow('Color 2', mascara_color2)
-    cv.imshow('Imagen Segmentada', img_segmentada)
+    #cv.imshow('Imagen Segmentada', img_segmentada)
     
 if __name__=="__main__":
     img_original=cv.imread('images/windex.bmp')

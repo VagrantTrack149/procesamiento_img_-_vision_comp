@@ -1,0 +1,2 @@
+Alt:12.5 | StdAnillo:14.126 | AlReves:SI | RES:VOLTEADA
+Alt:8.2 | StdAnillo:14.118 | AlReves:SI | RES:VOLTEADA

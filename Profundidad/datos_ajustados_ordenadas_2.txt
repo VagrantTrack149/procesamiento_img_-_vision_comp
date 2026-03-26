@@ -1,0 +1,16 @@
+2026-03-25 09:43:12 | Clase: GRANDE | Estado: NORMAL | H_Max: 153.0mm | Borde: 152.3mm | Centro: 150.0mm | Delta: 2.3mm | Ratio: 0.995
+2026-03-25 09:43:19 | Clase: CHICA | Estado: ABOLLADA | H_Max: 28.0mm | Borde: 20.0mm | Centro: 21.0mm | Delta: 1.0mm | Ratio: 0.714
+2026-03-25 09:43:23 | Clase: GRANDE | Estado: NORMAL | H_Max: 153.0mm | Borde: 151.7mm | Centro: 150.0mm | Delta: 1.7mm | Ratio: 0.991
+2026-03-25 09:43:26 | Clase: MEDIANA | Estado: NORMAL | H_Max: 106.0mm | Borde: 101.4mm | Centro: 104.5mm | Delta: 3.1mm | Ratio: 0.957
+2026-03-25 09:43:30 | Clase: CHICA | Estado: ABOLLADA | H_Max: 25.0mm | Borde: 18.0mm | Centro: 24.4mm | Delta: 6.4mm | Ratio: 0.720
+2026-03-25 09:43:34 | Clase: GRANDE | Estado: NORMAL | H_Max: 153.0mm | Borde: 151.6mm | Centro: 152.0mm | Delta: 0.4mm | Ratio: 0.991
+2026-03-25 09:43:37 | Clase: MEDIANA | Estado: NORMAL | H_Max: 107.0mm | Borde: 102.5mm | Centro: 103.0mm | Delta: 0.5mm | Ratio: 0.958
+2026-03-25 09:43:41 | Clase: CHICA | Estado: ABOLLADA | H_Max: 28.0mm | Borde: 22.7mm | Centro: 24.0mm | Delta: 1.3mm | Ratio: 0.811
+2026-03-25 09:43:51 | Clase: GRANDE | Estado: NORMAL | H_Max: 153.0mm | Borde: 152.3mm | Centro: 150.0mm | Delta: 2.3mm | Ratio: 0.995
+2026-03-25 09:43:59 | Clase: CHICA | Estado: ABOLLADA | H_Max: 28.0mm | Borde: 20.0mm | Centro: 21.0mm | Delta: 1.0mm | Ratio: 0.714
+2026-03-25 09:44:02 | Clase: GRANDE | Estado: NORMAL | H_Max: 153.0mm | Borde: 151.7mm | Centro: 150.0mm | Delta: 1.7mm | Ratio: 0.991
+2026-03-25 09:44:05 | Clase: MEDIANA | Estado: NORMAL | H_Max: 106.0mm | Borde: 101.4mm | Centro: 104.5mm | Delta: 3.1mm | Ratio: 0.957
+2026-03-25 09:44:09 | Clase: CHICA | Estado: ABOLLADA | H_Max: 25.0mm | Borde: 18.0mm | Centro: 24.4mm | Delta: 6.4mm | Ratio: 0.720
+2026-03-25 09:44:13 | Clase: GRANDE | Estado: NORMAL | H_Max: 153.0mm | Borde: 151.6mm | Centro: 152.0mm | Delta: 0.4mm | Ratio: 0.991
+2026-03-25 09:44:16 | Clase: MEDIANA | Estado: NORMAL | H_Max: 107.0mm | Borde: 102.5mm | Centro: 103.0mm | Delta: 0.5mm | Ratio: 0.958
+2026-03-25 09:44:21 | Clase: CHICA | Estado: ABOLLADA | H_Max: 28.0mm | Borde: 22.7mm | Centro: 24.0mm | Delta: 1.3mm | Ratio: 0.811

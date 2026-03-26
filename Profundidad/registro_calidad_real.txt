@@ -1,0 +1,14 @@
+ID     | HORA       | FORMA        | BORDE        | PROM_CIRC  | PROM_STD  
+--------------------------------------------------------------------------------
+1      | 11:24:29   | ABOLLADA     | OK           | 0.462      | 0.131     
+2      | 11:24:35   | OK           | IRREGULAR    | 0.541      | 0.436     
+3      | 11:24:43   | ABOLLADA     | IRREGULAR    | 0.491      | 0.298     
+4      | 11:24:46   | OK           | IRREGULAR    | 0.635      | 0.614     
+5      | 11:24:54   | ABOLLADA     | OK           | 0.486      | 0.170     
+6      | 11:24:57   | OK           | IRREGULAR    | 0.580      | 0.657     
+1      | 11:30:35   | ABOLLADA     | OK           | 0.407      | 0.180     
+2      | 11:30:42   | ABOLLADA     | IRREGULAR    | 0.470      | 0.534     
+3      | 11:31:00   | ABOLLADA     | IRREGULAR    | 0.491      | 0.420     
+4      | 11:31:04   | ABOLLADA     | IRREGULAR    | 0.423      | 0.840     
+5      | 11:31:14   | ABOLLADA     | OK           | 0.407      | 0.180     
+6      | 11:31:21   | ABOLLADA     | IRREGULAR    | 0.470      | 0.534     

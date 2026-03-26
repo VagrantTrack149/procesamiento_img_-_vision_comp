@@ -1,0 +1,8 @@
+ID     | HORA       | FORMA      | BORDE        | CIRC_MIN   | STD_MAX   
+---------------------------------------------------------------------------
+1      | 11:18:51   | ABOLLADA   | IRREGULAR    | 0.249      | 0.173     
+2      | 11:18:57   | ABOLLADA   | IRREGULAR    | 0.207      | 0.849     
+3      | 11:19:05   | ABOLLADA   | IRREGULAR    | 0.293      | 1.969     
+4      | 11:19:08   | ABOLLADA   | IRREGULAR    | 0.398      | 0.838     
+5      | 11:19:16   | ABOLLADA   | IRREGULAR    | 0.267      | 0.898     
+6      | 11:19:20   | ABOLLADA   | IRREGULAR    | 0.336      | 0.837     

@@ -1,0 +1,7 @@
+2026-03-25 09:44:51 | Clase: GRANDE | Estado: NORMAL | H_Max: 165.0mm | Borde: 151.1mm | Centro: 156.0mm | Delta: 4.9mm | Ratio: 0.916
+2026-03-25 09:44:54 | Clase: MEDIANA | Estado: NORMAL | H_Max: 114.0mm | Borde: 103.8mm | Centro: 105.0mm | Delta: 1.2mm | Ratio: 0.910
+2026-03-25 09:44:58 | Clase: CHICA | Estado: ABOLLADA | H_Max: 26.0mm | Borde: 19.6mm | Centro: 22.4mm | Delta: 2.7mm | Ratio: 0.755
+2026-03-25 09:45:02 | Clase: GRANDE | Estado: NORMAL | H_Max: 157.0mm | Borde: 151.5mm | Centro: 149.0mm | Delta: 2.5mm | Ratio: 0.965
+2026-03-25 09:45:11 | Clase: CHICA | Estado: ABOLLADA | H_Max: 31.0mm | Borde: 23.4mm | Centro: 21.0mm | Delta: 2.4mm | Ratio: 0.755
+2026-03-25 09:45:15 | Clase: GRANDE | Estado: NORMAL | H_Max: 161.0mm | Borde: 152.4mm | Centro: 151.6mm | Delta: 0.8mm | Ratio: 0.947
+2026-03-25 09:45:19 | Clase: CHICA | Estado: ABOLLADA | H_Max: 28.0mm | Borde: 21.2mm | Centro: 22.0mm | Delta: 0.8mm | Ratio: 0.759

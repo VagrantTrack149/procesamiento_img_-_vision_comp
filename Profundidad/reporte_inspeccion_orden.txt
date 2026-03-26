@@ -1,0 +1,4 @@
+ID_LATA | HORA | FORMA | BORDE | CIRC_MIN | STD_MAX
+-----------------------------------------------------------------
+Lata_001 | 11:17:19 | ABOLLADA | IRREGULAR | 0.249 | 0.173
+Lata_002 | 11:17:25 | ABOLLADA | IRREGULAR | 0.207 | 0.849

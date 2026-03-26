@@ -1,0 +1,8 @@
+2026-03-25 09:36:02 | Clase: GRANDE | Estado: NORMAL | H_Max: 15.30cm | Borde: 15.23cm | Centro: 15.00cm | Delta: 0.23cm | Err: 0.77cm
+2026-03-25 09:36:09 | Clase: CHICA | Estado: ABOLLADA | H_Max: 2.80cm | Borde: 2.00cm | Centro: 2.10cm | Delta: 0.10cm | Err: 0.40cm
+2026-03-25 09:36:13 | Clase: GRANDE | Estado: ABOLLADA | H_Max: 15.30cm | Borde: 15.17cm | Centro: 15.00cm | Delta: 0.17cm | Err: 0.83cm
+2026-03-25 09:36:16 | Clase: MEDIANA | Estado: NORMAL | H_Max: 10.60cm | Borde: 10.14cm | Centro: 10.45cm | Delta: 0.31cm | Err: 0.69cm
+2026-03-25 09:36:20 | Clase: CHICA | Estado: ABOLLADA | H_Max: 2.50cm | Borde: 1.80cm | Centro: 2.44cm | Delta: 0.64cm | Err: 0.14cm
+2026-03-25 09:36:23 | Clase: GRANDE | Estado: ABOLLADA | H_Max: 15.30cm | Borde: 15.16cm | Centro: 15.20cm | Delta: 0.04cm | Err: 0.96cm
+2026-03-25 09:36:27 | Clase: MEDIANA | Estado: ABOLLADA | H_Max: 10.70cm | Borde: 10.25cm | Centro: 10.30cm | Delta: 0.05cm | Err: 0.95cm
+2026-03-25 09:36:31 | Clase: CHICA | Estado: NORMAL | H_Max: 2.80cm | Borde: 2.27cm | Centro: 2.40cm | Delta: 0.13cm | Err: 0.37cm
